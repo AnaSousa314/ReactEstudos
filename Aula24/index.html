@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bind</title>
+
+<script>
+  /* Bind é ligar */
+  function carro(){
+    let velMax=200;
+
+    //sem o bind de carroLigarDetalhes, o this chama o Window, será impresso no console o Window
+    //com o bind de carroLigarDetalhes, o this chama detalhes, pois ele liga a função carro com detalhes
+    console.log(this.cor);
+  }
+
+  let detalhes={
+    cor:'Branco',
+    marca:'VW',
+    modelo: 'Golf'
+  }
+
+  let carroLigarDetalhes=carro.bind(detalhes);
+
+  //carro();
+  carroLigarDetalhes();
+</script>
+
+</head>
+<body>
+  
+</body>
+</html>
