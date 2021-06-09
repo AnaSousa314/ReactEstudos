@@ -8,16 +8,16 @@ function App() {
   const [pagina,setPagina]=useState(0)
 
   const linksPaginas=(pag)=>{
-    if(pag==1){
+    if(pag == 1){
       window.open('http://localhost:3000?1','_self')
-    }else if(pag==2){
+    }else if(pag == 2){
       window.open('http://localhost:3000?2','_self')
     }
   }
   const retornarPagina=()=>{
-    if(pagina==1){
+    if(pagina == 1){
       return <Pagina1/>
-    }else if(pagina==2){
+    }else if(pagina == 2){
       return <Pagina2/>
     }else{
       return(
